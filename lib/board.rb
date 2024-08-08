@@ -7,6 +7,7 @@ class Board
     # Code colors: Red, Green, Blue, Yellow, White, Purple
     # Hint colors: Red and White
     @colors = {red: "R".red, green: "G".green ,blue: "B".blue , yellow: "Y".yellow, white: "W".white, purple: "P".magenta}
+    # *** Keep in mind the code strings look like this "\e[31mR\e[0m"
     @code = []
     @code_as_nums = Array.new(4){rand(1..6)}
   end
