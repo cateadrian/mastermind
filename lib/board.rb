@@ -3,6 +3,7 @@ require "rainbow/refinement"
 class Board
   using Rainbow
   attr_reader :win
+  attr_accessor :code
 
   def initialize
     # Code colors: Red, Green, Blue, Yellow, White, Purple
@@ -42,7 +43,11 @@ class Board
   end
 
   def show_code
-    puts @code.join(" ")
+    if @code.instance_of?(Array)
+      puts @code.join(" ")
+    elsif @code.instance_of?(String)  
+      puts @code
+    end
   end
 
   def compare(player_guess)
